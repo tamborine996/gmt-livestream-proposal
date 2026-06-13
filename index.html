@@ -1,0 +1,1397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Greenwich Madina Trust — Livestream & Digital Access Investment Proposal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #18241f;
+      --muted: #5c6b62;
+      --faint: #8a978d;
+      --emerald: #0f5132;
+      --emerald-deep: #0a3a24;
+      --emerald-soft: #eef5f0;
+      --emerald-line: #cfe3d6;
+      --gold: #b8893a;
+      --gold-soft: #f6efe1;
+      --gold-line: #e6d3ad;
+      --line: #e7e4da;
+      --paper: #ffffff;
+      --page: #f3f1ea;
+      --ink-on-dark: #eaf3ec;
+      --radius: 16px;
+      --radius-sm: 11px;
+      --shadow-sm: 0 1px 2px rgba(15, 35, 25, .04), 0 6px 18px rgba(15, 35, 25, .05);
+      --shadow-md: 0 18px 48px rgba(12, 40, 26, .10);
+      --shadow-lg: 0 30px 70px rgba(12, 40, 26, .16);
+      --serif: "Fraunces", Georgia, "Times New Roman", serif;
+      --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 100% -10%, #ecefe9 0%, rgba(243,241,234,0) 60%),
+        var(--page);
+      font-family: var(--sans);
+      font-size: 16.5px;
+      line-height: 1.62;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: var(--emerald); text-underline-offset: 2px; }
+
+    h1, h2, h3, h4 {
+      margin: 0;
+      font-family: var(--serif);
+      color: var(--emerald-deep);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      font-weight: 600;
+    }
+
+    p { margin: 14px 0 0; }
+    strong { color: var(--ink); font-weight: 600; }
+
+    .eyebrow {
+      margin: 0;
+      font-family: var(--sans);
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ---------- Scroll progress ---------- */
+    .progress {
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: 3px;
+      background: transparent;
+      z-index: 60;
+    }
+    .progress > span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--gold), var(--emerald));
+      transition: width .1s linear;
+    }
+
+    /* ---------- Sticky nav ---------- */
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: saturate(140%) blur(10px);
+      background: rgba(247, 246, 241, .82);
+      border-bottom: 1px solid var(--line);
+    }
+    .topnav-inner {
+      width: min(100%, 1180px);
+      margin: 0 auto;
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .brandmark {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 700;
+      font-size: .92rem;
+      color: var(--emerald-deep);
+      white-space: nowrap;
+    }
+    .brandmark .seal { width: 30px; height: 30px; flex: none; }
+    .navlinks {
+      margin-left: auto;
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    .navlinks a {
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 7px 12px;
+      border-radius: 999px;
+      transition: background .2s, color .2s;
+    }
+    .navlinks a:hover { color: var(--emerald-deep); background: var(--emerald-soft); }
+    .navlinks a.active { color: #fff; background: var(--emerald); }
+
+    .document {
+      width: min(100%, 1180px);
+      margin: 0 auto;
+      padding: 30px 28px 70px;
+    }
+
+    .sheet {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      color: var(--ink-on-dark);
+      padding: 64px 60px 56px;
+      background:
+        radial-gradient(900px 500px at 88% -20%, rgba(184,137,58,.30), transparent 60%),
+        linear-gradient(160deg, #0c3f28 0%, #0a3a24 45%, #0e2c1e 100%);
+      overflow: hidden;
+    }
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: .14;
+      pointer-events: none;
+    }
+    .hero-glow {
+      position: absolute;
+      width: 520px; height: 520px;
+      right: -120px; top: -160px;
+      background: radial-gradient(circle, rgba(184,137,58,.55), transparent 62%);
+      filter: blur(10px);
+      z-index: -1;
+      pointer-events: none;
+    }
+    .hero .eyebrow { color: #e7c987; }
+    .hero h1 {
+      max-width: 18ch;
+      margin-top: 16px;
+      font-size: clamp(2.1rem, 4.2vw, 3.35rem);
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: -0.018em;
+    }
+    .hero h1 .accent { color: #ecc987; font-style: italic; font-weight: 500; }
+    .hero-sub {
+      max-width: 56ch;
+      margin-top: 20px;
+      font-size: 1.08rem;
+      color: #cfe2d4;
+    }
+    .hero-meta {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 30px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.16);
+    }
+    .hero-meta div { line-height: 1.3; }
+    .hero-meta .k {
+      display: block;
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #9cc0a8;
+      font-weight: 700;
+    }
+    .hero-meta .v { font-weight: 600; color: #f1f7f2; font-size: .98rem; }
+
+    .hero-stats {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .hstat {
+      padding: 18px 20px;
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(4px);
+    }
+    .hstat .num {
+      font-family: var(--serif);
+      font-size: 1.9rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1;
+    }
+    .hstat .lbl {
+      margin-top: 8px;
+      font-size: .82rem;
+      color: #bcd6c4;
+      line-height: 1.35;
+    }
+
+    /* ---------- Main ---------- */
+    main { padding: 22px 60px 64px; }
+
+    section { scroll-margin-top: 76px; }
+    section + section {
+      margin-top: 18px;
+      padding-top: 44px;
+      border-top: 1px solid var(--line);
+    }
+
+    .sec-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 6px; }
+    .sec-num {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gold);
+      flex: none;
+      padding-top: 4px;
+    }
+    h2 { font-size: clamp(1.5rem, 2.6vw, 2.05rem); }
+    h2 + p, .sec-head + p { color: var(--muted); }
+    .lead { font-size: 1.06rem; color: var(--muted); max-width: 70ch; }
+
+    h3 { margin-top: 30px; font-size: 1.2rem; }
+
+    ul, ol { margin: 14px 0 0; padding-left: 1.25rem; }
+    li + li { margin-top: 8px; }
+    ul.clean { list-style: none; padding-left: 0; }
+    ul.clean li { position: relative; padding-left: 30px; }
+    ul.clean li::before {
+      content: "";
+      position: absolute;
+      left: 4px; top: .62em;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    /* ---------- Exec summary cards ---------- */
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 26px;
+    }
+    .summary-item {
+      position: relative;
+      padding: 22px 20px 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, #fff, #fcfdfb);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    .summary-item::before {
+      content: "";
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 4px; background: var(--emerald);
+    }
+    .summary-item .ic {
+      width: 40px; height: 40px;
+      display: grid; place-items: center;
+      border-radius: 10px;
+      background: var(--emerald-soft);
+      color: var(--emerald);
+      margin-bottom: 14px;
+    }
+    .summary-item strong { display: block; font-size: 1.05rem; color: var(--emerald-deep); font-family: var(--serif); font-weight: 600; }
+    .summary-item span { display: block; margin-top: 6px; color: var(--muted); font-size: .94rem; }
+
+    /* ---------- Equipment chips ---------- */
+    .chip-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 10px 16px 10px 12px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--emerald-line);
+      font-weight: 600; font-size: .92rem; color: var(--emerald-deep);
+      box-shadow: var(--shadow-sm);
+    }
+    .chip svg { color: var(--emerald); }
+
+    /* ---------- Staged timeline ---------- */
+    .timeline { margin-top: 30px; position: relative; }
+    .timeline::before {
+      content: ""; position: absolute;
+      left: 21px; top: 14px; bottom: 14px; width: 2px;
+      background: linear-gradient(180deg, var(--emerald), var(--emerald-line));
+    }
+    .tl-step { position: relative; padding: 0 0 26px 64px; }
+    .tl-step:last-child { padding-bottom: 0; }
+    .tl-dot {
+      position: absolute; left: 8px; top: 2px;
+      width: 28px; height: 28px;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      background: var(--emerald); color: #fff;
+      font-weight: 700; font-size: .9rem;
+      font-family: var(--sans);
+      box-shadow: 0 0 0 5px var(--page);
+      z-index: 1;
+    }
+    .tl-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow-sm);
+      padding: 20px 22px;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .tl-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .tl-card .tl-top { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    .tl-card h3 { margin: 0; font-size: 1.16rem; }
+    .price-tag {
+      flex: none;
+      font-family: var(--serif);
+      font-weight: 600;
+      color: var(--emerald-deep);
+      background: var(--emerald-soft);
+      border: 1px solid var(--emerald-line);
+      padding: 5px 13px;
+      border-radius: 999px;
+      font-size: .95rem;
+      white-space: nowrap;
+    }
+    .price-tag.muted { color: var(--gold); background: var(--gold-soft); border-color: var(--gold-line); }
+    .tl-card p { margin: 9px 0 0; font-size: .96rem; color: var(--muted); }
+    .tl-card p strong { color: var(--ink); }
+
+    /* ---------- Note / callout ---------- */
+    .note {
+      margin-top: 22px;
+      display: flex; gap: 14px;
+      padding: 18px 20px;
+      border-radius: var(--radius);
+      background: var(--gold-soft);
+      border: 1px solid var(--gold-line);
+      color: #5b4621;
+    }
+    .note svg { flex: none; color: var(--gold); margin-top: 2px; }
+    .note strong { color: #4a3a1b; }
+
+    /* ---------- Q&A ---------- */
+    .qa { margin-top: 22px; display: grid; gap: 12px; }
+    .qa details {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    .qa summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 18px 22px;
+      display: flex; align-items: center; gap: 14px;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.12rem;
+      color: var(--emerald-deep);
+    }
+    .qa summary::-webkit-details-marker { display: none; }
+    .qa summary .q-ic {
+      flex: none;
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      border: 2px solid var(--emerald-line);
+      display: grid; place-items: center;
+      color: var(--emerald);
+      transition: transform .25s, background .25s, color .25s;
+    }
+    .qa details[open] summary .q-ic { transform: rotate(45deg); background: var(--emerald); color: #fff; border-color: var(--emerald); }
+    .qa .qa-body { padding: 0 22px 20px 62px; }
+    .qa .qa-body > :first-child { margin-top: 0; }
+    .qa .qa-body p, .qa .qa-body li { color: var(--muted); font-size: .98rem; }
+
+    /* pillars */
+    .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+    .pillar {
+      padding: 22px 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg,#fff,#fbfdfb);
+      box-shadow: var(--shadow-sm);
+    }
+    .pillar .pnum {
+      font-family: var(--serif); font-size: 2rem; font-weight: 600;
+      color: var(--gold-line);
+      line-height: 1;
+    }
+    .pillar h4 { margin-top: 6px; font-size: 1.12rem; }
+    .pillar p { font-size: .94rem; color: var(--muted); }
+
+    /* ---------- Appendix shell ---------- */
+    .appendix-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .appendix-tag::before { content: ""; width: 22px; height: 2px; background: var(--gold); display: inline-block; }
+
+    /* ===== Appendix A : Cost dashboard ===== */
+    .cost-dash {
+      margin-top: 26px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: linear-gradient(180deg, #fbfdfb, #f6faf7);
+      box-shadow: var(--shadow-sm);
+      padding: 26px;
+    }
+    .dash-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+    .dash-head h3 { margin: 0; font-size: 1.2rem; }
+    .toggle {
+      display: inline-flex;
+      padding: 4px;
+      background: #eef2ed;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      gap: 2px;
+    }
+    .toggle button {
+      border: 0; background: transparent;
+      font-family: var(--sans); font-weight: 600; font-size: .85rem;
+      color: var(--muted);
+      padding: 8px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all .25s;
+      white-space: nowrap;
+    }
+    .toggle button.on { background: var(--emerald); color: #fff; box-shadow: var(--shadow-sm); }
+
+    .metric-cards {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+      margin-top: 22px;
+    }
+    .mcard {
+      position: relative;
+      padding: 20px;
+      border-radius: var(--radius);
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    .mcard.feature { background: linear-gradient(155deg, #0f5132, #0a3a24); border-color: var(--emerald-deep); }
+    .mcard .mlabel { font-size: .76rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); }
+    .mcard.feature .mlabel { color: #9cc0a8; }
+    .mcard .mval {
+      font-family: var(--serif); font-weight: 600;
+      font-size: 2.5rem; line-height: 1; color: var(--emerald-deep);
+      margin-top: 12px;
+    }
+    .mcard.feature .mval { color: #fff; }
+    .mcard .msub { margin-top: 10px; font-size: .85rem; color: var(--muted); line-height: 1.4; }
+    .mcard.feature .msub { color: #bcd6c4; }
+    .mcard .ribbon {
+      position: absolute; top: 14px; right: -34px;
+      transform: rotate(45deg);
+      background: var(--gold); color: #fff;
+      font-size: .62rem; font-weight: 700; letter-spacing: .1em;
+      padding: 4px 40px;
+    }
+
+    /* composition bar */
+    .composition { margin-top: 24px; }
+    .comp-title { display:flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+    .comp-title h4 { font-size: 1.02rem; }
+    .comp-total { font-family: var(--serif); font-weight: 600; color: var(--emerald-deep); font-size: 1.1rem; }
+    .bar {
+      margin-top: 14px;
+      display: flex;
+      height: 56px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    .seg {
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 700; font-size: .9rem;
+      transition: flex-basis .7s cubic-bezier(.22,1,.36,1), opacity .4s, filter .4s;
+      min-width: 0;
+      cursor: default;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .seg.s1 { background: linear-gradient(180deg,#0f5132,#0c4429); }
+    .seg.s2 { background: linear-gradient(180deg,#2f8f6a,#247a59); }
+    .seg.s3 { background: linear-gradient(180deg,#b8893a,#a2762d); }
+    .seg.dim { opacity: .28; filter: grayscale(.4); }
+    .seg .seg-tip {
+      position: absolute; bottom: calc(100% + 9px); left: 50%; transform: translateX(-50%) translateY(4px);
+      background: var(--emerald-deep); color: #fff;
+      padding: 8px 12px; border-radius: 8px;
+      font-size: .78rem; font-weight: 500; white-space: nowrap;
+      opacity: 0; pointer-events: none; transition: all .2s;
+      box-shadow: var(--shadow-md); z-index: 5;
+    }
+    .seg .seg-tip::after { content:""; position:absolute; top:100%; left:50%; transform:translateX(-50%); border:6px solid transparent; border-top-color: var(--emerald-deep); }
+    .seg:hover .seg-tip { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .legend { display: flex; flex-wrap: wrap; gap: 16px 22px; margin-top: 16px; }
+    .legend span { display: inline-flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); font-weight: 500; }
+    .legend .sw { width: 13px; height: 13px; border-radius: 4px; flex: none; }
+    .legend .sw.s1 { background: #0f5132; }
+    .legend .sw.s2 { background: #2f8f6a; }
+    .legend .sw.s3 { background: #b8893a; }
+
+    /* phased approval flow */
+    .phases { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: stretch; gap: 8px; margin-top: 30px; }
+    .phase {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow-sm);
+      padding: 20px;
+      display: flex; flex-direction: column;
+    }
+    .phase.now { border-color: var(--emerald-line); background: linear-gradient(180deg,#f3faf5,#fff); }
+    .phase.later { border-color: var(--gold-line); background: linear-gradient(180deg,#fdf9f1,#fff); }
+    .phase .ph-tag {
+      align-self: flex-start;
+      font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      padding: 4px 11px; border-radius: 999px; margin-bottom: 12px;
+    }
+    .phase.now .ph-tag { background: var(--emerald); color: #fff; }
+    .phase.trial .ph-tag { background: #e9eef0; color: var(--muted); }
+    .phase.later .ph-tag { background: var(--gold-soft); color: var(--gold); border: 1px solid var(--gold-line); }
+    .phase h4 { font-size: 1.08rem; }
+    .phase ul { margin-top: 10px; padding-left: 0; list-style: none; }
+    .phase ul li { position: relative; padding-left: 20px; font-size: .9rem; color: var(--muted); }
+    .phase ul li + li { margin-top: 6px; }
+    .phase ul li::before { content:""; position:absolute; left:2px; top:.55em; width:6px;height:6px;border-radius:50%; background: var(--emerald); }
+    .phase.later ul li::before { background: var(--gold); }
+    .phase .ph-cost { margin-top: auto; padding-top: 14px; font-family: var(--serif); font-weight: 600; font-size: 1.25rem; color: var(--emerald-deep); }
+    .phase.later .ph-cost { color: var(--gold); }
+    .phase.trial .ph-cost { color: var(--muted); }
+    .ph-arrow { display: grid; place-items: center; color: var(--emerald-line); }
+
+    /* detailed cost table */
+    .table-wrap {
+      margin-top: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    table { width: 100%; border-collapse: collapse; background: #fff; font-size: .94rem; }
+    thead th {
+      background: var(--emerald-deep); color: #eaf3ec;
+      text-align: left; padding: 14px 18px;
+      font-family: var(--sans); font-weight: 600; font-size: .8rem;
+      letter-spacing: .04em; text-transform: uppercase;
+    }
+    tbody td { padding: 15px 18px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--muted); }
+    tbody tr:last-child td { border-bottom: 0; }
+    tbody tr:nth-child(even) { background: #fafcfa; }
+    tbody td:first-child { color: var(--ink); font-weight: 600; }
+    .row-total { background: var(--emerald-soft) !important; }
+    .row-total td { color: var(--emerald-deep); font-weight: 700; border-top: 2px solid var(--emerald-line); }
+    .pill {
+      display: inline-block; padding: 4px 11px; border-radius: 999px;
+      font-size: .76rem; font-weight: 700; letter-spacing: .02em; white-space: nowrap;
+    }
+    .pill.now { background: var(--emerald-soft); color: var(--emerald); border: 1px solid var(--emerald-line); }
+    .pill.later { background: var(--gold-soft); color: var(--gold); border: 1px solid var(--gold-line); }
+    .num-cell { font-family: var(--serif); font-weight: 600; color: var(--emerald-deep); white-space: nowrap; }
+
+    /* ===== Appendix B : Equipment gallery ===== */
+    .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; align-items: center; }
+    .filter-bar .f-label { font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); margin-right: 4px; }
+    .fbtn {
+      border: 1px solid var(--line); background: #fff;
+      font-family: var(--sans); font-weight: 600; font-size: .85rem;
+      color: var(--muted);
+      padding: 8px 16px; border-radius: 999px; cursor: pointer;
+      transition: all .2s;
+    }
+    .fbtn:hover { border-color: var(--emerald-line); color: var(--emerald-deep); }
+    .fbtn.on { background: var(--emerald); color: #fff; border-color: var(--emerald); }
+
+    .gallery {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 24px;
+    }
+    .eq-card {
+      display: flex; flex-direction: column;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition: transform .28s cubic-bezier(.22,1,.36,1), box-shadow .28s, opacity .3s;
+    }
+    .eq-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .eq-card.hide { display: none; }
+    .eq-figure {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      background:
+        radial-gradient(120% 100% at 50% 0%, #ffffff, #eef2ec);
+      display: grid; place-items: center;
+      padding: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+    .eq-figure img { max-width: 100%; max-height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+    .eq-figure .eq-pill {
+      position: absolute; top: 12px; left: 12px;
+    }
+    .eq-body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+    .eq-body h4 { font-size: 1.1rem; }
+    .eq-price {
+      font-family: var(--serif); font-weight: 600; color: var(--emerald-deep);
+      font-size: 1.02rem; margin-top: 4px;
+    }
+    .eq-meta { margin-top: 14px; }
+    .eq-meta .label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--gold); display: block; margin-bottom: 3px;
+    }
+    .eq-meta p { margin: 0 0 12px; font-size: .9rem; color: var(--muted); line-height: 1.5; }
+    .eq-meta p:last-child { margin-bottom: 0; }
+
+    .source-note { margin-top: 18px; font-size: .85rem; color: var(--faint); font-style: italic; }
+
+    /* ---------- closing ---------- */
+    .closing {
+      margin-top: 40px;
+      padding: 34px 36px;
+      border-radius: 20px;
+      color: #eaf3ec;
+      background:
+        radial-gradient(700px 360px at 90% 0%, rgba(184,137,58,.28), transparent 60%),
+        linear-gradient(150deg, #0c3f28, #0a3a24);
+      box-shadow: var(--shadow-md);
+    }
+    .closing h3 { color: #fff; font-size: 1.5rem; }
+    .closing p { color: #cfe2d4; max-width: 66ch; }
+    .closing .cta {
+      margin-top: 22px;
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #ecc987; color: #3a2c10;
+      font-weight: 700; font-size: .95rem;
+      padding: 13px 22px; border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(0,0,0,.2);
+    }
+
+    footer {
+      padding: 26px 60px 34px;
+      border-top: 1px solid var(--line);
+      color: var(--faint);
+      font-size: .85rem;
+      display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; align-items: center;
+    }
+    footer .brandmark { color: var(--muted); }
+
+    /* ---------- reveal animation ---------- */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1); }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- responsive ---------- */
+    @media (max-width: 940px) {
+      .hero, main { padding-left: 34px; padding-right: 34px; }
+      .summary, .hero-stats, .metric-cards, .pillars, .gallery { grid-template-columns: 1fr 1fr; }
+      .phases { grid-template-columns: 1fr; }
+      .ph-arrow { transform: rotate(90deg); }
+      .navlinks { display: none; }
+    }
+    @media (max-width: 620px) {
+      body { font-size: 16px; }
+      .document { padding: 14px 12px 40px; }
+      .hero, main, footer { padding-left: 22px; padding-right: 22px; }
+      .hero { padding-top: 44px; }
+      .summary, .hero-stats, .metric-cards, .pillars, .gallery { grid-template-columns: 1fr; }
+      .cost-dash { padding: 18px; }
+      .qa .qa-body { padding-left: 22px; }
+      .dash-head { gap: 16px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1 !important; transform: none !important; }
+      html { scroll-behavior: auto; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 13mm 13mm 16mm; }
+
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      html { scroll-behavior: auto; }
+      body { background: #fff; font-size: 10.8px; line-height: 1.5; }
+
+      /* drop the screen-only controls — the content they govern stays */
+      .progress, .topnav, .toggle, .filter-bar, .ph-arrow, .seg-tip, .closing .cta { display: none !important; }
+
+      .document { width: 100%; padding: 0; }
+      .sheet { border: 0; box-shadow: none; border-radius: 0; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+
+      /* keep the premium colour, just tighten the spacing */
+      .hero { padding: 26px 30px 22px; }
+      .hero h1 { font-size: 2.1rem; margin-top: 8px; }
+      .hero-sub { margin-top: 12px; font-size: .95rem; }
+      .hero-meta { margin-top: 16px; padding-top: 14px; }
+      .hero-stats { margin-top: 18px; }
+      main { padding: 18px 30px 26px; }
+      section + section { margin-top: 14px; padding-top: 22px; }
+      h2 { font-size: 1.55rem; }
+
+      /* let the dark panels render their backgrounds */
+      .hero, .mcard.feature, .closing, .seg, thead th, .tl-dot,
+      .phase.now .ph-tag, .toggle button.on, .navlinks a.active { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+      /* page-break hygiene */
+      h2, h3, h4 { break-after: avoid; }
+      .sec-head, .appendix-tag, .dash-head { break-after: avoid; }
+      .eq-card, .tl-step, .phase, .mcard, .summary-item, .pillar,
+      figure, tr, .qa details, .note, .composition, .cost-dash { break-inside: avoid; }
+      .hero { break-inside: avoid; }
+
+      /* each appendix opens a fresh page */
+      #appendix-cost, #appendix-items { break-before: page; }
+
+      /* expand every accordion answer for a static read */
+      .qa details .qa-body { display: block !important; }
+      .qa summary .q-ic { display: none; }
+
+      /* full cost bar, nothing dimmed, in the printed copy */
+      .seg.dim { opacity: 1 !important; filter: none !important; }
+
+      /* gallery reads better as 2-up on paper */
+      .gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .eq-figure { padding: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress"><span id="progressBar"></span></div>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <div class="brandmark">
+        <svg class="seal" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" stroke="#b8893a" stroke-width="1.5"/>
+          <path d="M25 20a7 7 0 1 1-5.2-6.77 5.6 5.6 0 1 0 0 13.54A7 7 0 0 1 25 20Z" fill="#0f5132"/>
+          <path d="m27.5 14.8 1.1 2.3 2.5.3-1.8 1.7.45 2.5-2.25-1.2-2.25 1.2.45-2.5-1.8-1.7 2.5-.3 1.1-2.3Z" fill="#b8893a"/>
+        </svg>
+        Greenwich Madina Trust
+      </div>
+      <div class="navlinks" id="navlinks">
+        <a href="#summary">Summary</a>
+        <a href="#proposal">Proposal</a>
+        <a href="#questions">Q&amp;A</a>
+        <a href="#appendix-cost">Costs</a>
+        <a href="#appendix-items">Equipment</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="document">
+    <article class="sheet">
+
+      <!-- ============ HERO ============ -->
+      <header class="hero">
+        <svg class="hero-pattern" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <pattern id="girih" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
+              <g fill="none" stroke="#e7c987" stroke-width="1">
+                <path d="M30 6 38 22 54 22 42 34 46 52 30 42 14 52 18 34 6 22 22 22Z"/>
+                <circle cx="30" cy="30" r="3"/>
+                <path d="M0 30 H60 M30 0 V60" stroke-opacity=".35"/>
+              </g>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#girih)"/>
+        </svg>
+        <div class="hero-glow" aria-hidden="true"></div>
+
+        <p class="eyebrow">Greenwich Madina Trust · Committee Proposal</p>
+        <h1>Livestream &amp; <span class="accent">Digital Access</span> Investment Proposal</h1>
+        <p class="hero-sub">A staged, low-risk plan to bring reliable, high-quality live streaming to the masjid — widening access for women, the elderly and the wider community, while protecting the Trust's funds at every step.</p>
+
+        <div class="hero-meta">
+          <div><span class="k">Prepared for</span><span class="v">The GMT Committee</span></div>
+          <div><span class="k">Date</span><span class="v">June 2026</span></div>
+          <div><span class="k">Version</span><span class="v">2.0</span></div>
+          <div><span class="k">Decision</span><span class="v">Approve Stage 1 &amp; broadband</span></div>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hstat reveal">
+            <div class="num" data-count="1010" data-prefix="£">£0</div>
+            <div class="lbl">Immediate upfront request — camera &amp; audio feed, before any trial</div>
+          </div>
+          <div class="hstat reveal">
+            <div class="num" data-count="2328" data-prefix="£">£0</div>
+            <div class="lbl">Maximum 24-month commitment if every stage proceeds</div>
+          </div>
+          <div class="hstat reveal">
+            <div class="num" data-count="5" data-suffix="-yr">0</div>
+            <div class="lbl">Manufacturer warranty on the recommended PTZOptics camera</div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- ============ SUMMARY ============ -->
+        <section id="summary">
+          <div class="sec-head"><span class="sec-num">01</span><h2>At a glance</h2></div>
+          <p class="lead">The committee is asked to approve a small, controlled first step — not the whole permanent installation. We invest, test on a real event, and only then complete the build.</p>
+
+          <div class="summary">
+            <div class="summary-item reveal">
+              <div class="ic">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20M2 12h20"/></svg>
+              </div>
+              <strong>Purpose</strong>
+              <span>Improve digital access to religious and community events for those who cannot attend in person.</span>
+            </div>
+            <div class="summary-item reveal">
+              <div class="ic">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+              </div>
+              <strong>Approach</strong>
+              <span>Stage the investment, run a live trial, then complete the permanent installation only if it succeeds.</span>
+            </div>
+            <div class="summary-item reveal">
+              <div class="ic">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </div>
+              <strong>The decision today</strong>
+              <span>Approve reconnecting broadband and purchasing the Stage 1 equipment ahead of a live trial.</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ PROPOSAL ============ -->
+        <section id="proposal">
+          <div class="sec-head"><span class="sec-num">02</span><h2>The investment proposal</h2></div>
+          <p class="lead">GMT should invest in equipment to enable high-quality live streaming. The equipment required is:</p>
+
+          <div class="chip-row">
+            <span class="chip"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>Broadband</span>
+            <span class="chip"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>Camera</span>
+            <span class="chip"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 20h20"/></svg>Laptop</span>
+            <span class="chip"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 4v5"/></svg>Storage</span>
+            <span class="chip"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9a4 4 0 0 1 4-4h1v6H8a4 4 0 0 1-4-2zM20 15a4 4 0 0 1-4 4h-1v-6h1a4 4 0 0 1 4 2zM9 11h6"/></svg>Cables</span>
+          </div>
+
+          <p>We have conducted research into the items required and propose an implementation plan which is purposefully staggered to mitigate risk.</p>
+
+          <div class="timeline">
+            <div class="tl-step reveal">
+              <div class="tl-dot">1</div>
+              <div class="tl-card">
+                <div class="tl-top"><h3>Reconnect BT Broadband</h3><span class="price-tag">£32 / month</span></div>
+                <p>BT broadband wiring already exists at the facilities and has been used before, so we can potentially avoid installation fees.</p>
+                <p>It can be set up through <strong>Switch Aid</strong>, a specialist provider to charities. The price is £32 per month (VAT inclusive) over a 24-month contract — the cheapest business broadband and the shortest contract available.</p>
+              </div>
+            </div>
+            <div class="tl-step reveal">
+              <div class="tl-dot">2</div>
+              <div class="tl-card">
+                <div class="tl-top"><h3>Purchase the PTZOptics Move SE 20X camera</h3><span class="price-tag">£995</span></div>
+                <p>An award-winning, budget-friendly camera purpose-built for our use case: live-streaming in public spaces, with features well-suited to the masjid.</p>
+                <p>The price is <strong>£995</strong> and it comes with a <strong>5-year warranty</strong>.</p>
+              </div>
+            </div>
+            <div class="tl-step reveal">
+              <div class="tl-dot">3</div>
+              <div class="tl-card">
+                <div class="tl-top"><h3>Conduct a trial live stream</h3><span class="price-tag muted">No cost</span></div>
+                <p>The trial should take place at a mid-week Dars-e-Quran event. Qasim and/or Hammad can work out the streaming logistics and check audio quality, and we can determine whether any additional cables are required.</p>
+                <p>As a laptop is required for streaming, Qasim will donate the use of his laptop for this trial.</p>
+              </div>
+            </div>
+            <div class="tl-step reveal">
+              <div class="tl-dot">4</div>
+              <div class="tl-card">
+                <div class="tl-top"><h3>Complete purchase of remaining items</h3><span class="price-tag muted">~£450</span></div>
+                <p><strong>Laptop:</strong> minimum 16&nbsp;GB RAM and an i5 CPU — approximately £300.</p>
+                <p><strong>Storage:</strong> mounted in the office with a clear cover, as the permanent home for the laptop, camera and cables — approximately £150.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="note">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V18h6v-1.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2Z"/></svg>
+            <div><strong>Why staggered?</strong> Each stage de-risks the next. We commit the minimum, prove the system works on a real event, and only then spend on the permanent fixtures — so the Trust never pays for a setup it hasn't seen working.</div>
+          </div>
+        </section>
+
+        <!-- ============ Q&A ============ -->
+        <section id="questions">
+          <div class="sec-head"><span class="sec-num">03</span><h2>Questions &amp; answers</h2></div>
+          <p class="lead">The reasoning behind the recommendation, addressed directly.</p>
+
+          <div class="qa">
+            <details open>
+              <summary><span class="q-ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>Why do we need live streaming?</summary>
+              <div class="qa-body">
+                <p>Live streaming events would mean that women and those unable to attend — such as the elderly — can partake in the benefits of religious events, increasing access across the community.</p>
+                <p>A high-quality, professional stream also enhances the reputation of GMT more broadly, helping to attract speakers, donations and wider engagement.</p>
+              </div>
+            </details>
+
+            <details>
+              <summary><span class="q-ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>Why is this investment required?</summary>
+              <div class="qa-body">
+                <p>Currently, Qasim's phone is relied upon to live stream using 5G. The problems with this are:</p>
+                <ul class="clean">
+                  <li>The sound input on Qasim's phone is broken — there has been only one live stream in 2025 and none so far in 2026.</li>
+                  <li>5G gives unstable quality, particularly as more attendees arrive towards the end of an event.</li>
+                  <li>Qasim could be away or unavailable, creating a dependency on one individual that should be avoided.</li>
+                </ul>
+                <p>Using a dedicated camera over a broadband connection, with equipment kept at the masjid, resolves all three issues.</p>
+              </div>
+            </details>
+
+            <details>
+              <summary><span class="q-ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>Why has the PTZOptics camera been chosen?</summary>
+              <div class="qa-body">
+                <p>This choice was made after detailed research and comparison against both cheaper and more expensive alternatives. The recommendation rests on three considerations: suitability, reliability and value for money.</p>
+
+                <div class="pillars">
+                  <div class="pillar reveal">
+                    <div class="pnum">1</div>
+                    <h4>Suitability</h4>
+                    <p>It does exactly what we need: <strong>1080p</strong> streaming, <strong>20× optical zoom</strong>, remote pan/tilt/zoom, preset positions (mimbar, wide hall, lecture), wall or ceiling mounting, and flexible connections. We deliberately avoided paying extra for 4K — 1080p is ample for phones, tablets and laptops.</p>
+                  </div>
+                  <div class="pillar reveal">
+                    <div class="pnum">2</div>
+                    <h4>Reliability</h4>
+                    <p>PTZOptics is a recognised brand across livestreaming, education, corporate AV and house-of-worship markets. The <strong>5-year warranty</strong> gives confidence for regular use at Jumu'ah, Ramadan, classes and events — reducing the risk of an unknown-brand camera with uncertain support.</p>
+                  </div>
+                  <div class="pillar reveal">
+                    <div class="pnum">3</div>
+                    <h4>Value for money</h4>
+                    <p>It sits in the right middle ground. Cheaper cameras compromise on warranty, software and durability; broadcast-level models add cost for features a mosque stream won't use. This camera gives the features we actually need from a respected brand — without paying for the rest.</p>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- ============ APPENDIX A ============ -->
+        <section id="appendix-cost">
+          <span class="appendix-tag">Appendix A</span>
+          <div class="sec-head"><span class="sec-num">04</span><h2>Staged cost &amp; approval request</h2></div>
+          <p class="lead">The committee is <strong>not</strong> being asked to approve the whole permanent setup today. Approve the controlled Stage 1 purchases now, complete a real-event trial, and return for Stage 2 approval only if the trial is accepted.</p>
+
+          <div class="cost-dash">
+            <div class="dash-head">
+              <h3>Cost summary</h3>
+              <div class="toggle" role="group" aria-label="Cost view">
+                <button class="on" data-view="now">What we approve now</button>
+                <button data-view="full">Full 24-month view</button>
+              </div>
+            </div>
+
+            <div class="metric-cards">
+              <div class="mcard feature">
+                <span class="ribbon">Decide today</span>
+                <div class="mlabel">Immediate upfront request</div>
+                <div class="mval" data-count="1010" data-prefix="£">£0</div>
+                <div class="msub">Camera plus initial audio-feed allowance, before the trial.</div>
+              </div>
+              <div class="mcard">
+                <div class="mlabel">Maximum 24-month view</div>
+                <div class="mval" data-count="2328" data-prefix="£">£0</div>
+                <div class="msub">Assumes broadband runs for 24 months and Stage 2 proceeds.</div>
+              </div>
+              <div class="mcard">
+                <div class="mlabel">Monthly equivalent</div>
+                <div class="mval"><span data-count="97" data-prefix="£">£0</span></div>
+                <div class="msub">A view for committee &amp; fundraising discussion — not a separate contract value.</div>
+              </div>
+            </div>
+
+            <div class="composition">
+              <div class="comp-title">
+                <h4 id="compHeading">How the maximum £2,328 breaks down</h4>
+                <span class="comp-total" id="compTotal">£2,328</span>
+              </div>
+              <div class="bar" id="costBar">
+                <div class="seg s1" data-group="now" style="flex-basis:43.4%">
+                  <span>Stage 1 · £1,010</span>
+                  <span class="seg-tip">Stage 1 equipment — camera &amp; audio feed · £1,010</span>
+                </div>
+                <div class="seg s2" data-group="full" style="flex-basis:33.0%">
+                  <span>Broadband · £768</span>
+                  <span class="seg-tip">BT broadband — £32/mo × 24 months · £768</span>
+                </div>
+                <div class="seg s3" data-group="full" style="flex-basis:23.6%">
+                  <span>Stage 2 · £550</span>
+                  <span class="seg-tip">Stage 2 — laptop, cabinet &amp; mount · £550</span>
+                </div>
+              </div>
+              <div class="legend">
+                <span><span class="sw s1"></span>Stage 1 equipment — approve now</span>
+                <span><span class="sw s2"></span>Broadband — 24-month commitment</span>
+                <span><span class="sw s3"></span>Stage 2 equipment — approve later</span>
+              </div>
+            </div>
+          </div>
+
+          <h3>The recommended path</h3>
+          <div class="phases">
+            <div class="phase now reveal">
+              <span class="ph-tag">Approve now</span>
+              <h4>Stage 1 — go live</h4>
+              <ul>
+                <li>PTZOptics Move SE 20X camera</li>
+                <li>Initial audio-feed allowance</li>
+                <li>BT wired broadband via Switch Aid</li>
+              </ul>
+              <div class="ph-cost">£1,010 <span style="font-size:.8rem;font-weight:500;color:var(--muted);">+ broadband</span></div>
+            </div>
+            <div class="ph-arrow" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="phase trial reveal">
+              <span class="ph-tag">No cost</span>
+              <h4>Live trial</h4>
+              <ul>
+                <li>Stream a Dars-e-Quran event</li>
+                <li>Qasim donates a laptop for the test</li>
+                <li>Confirm audio &amp; any cables needed</li>
+              </ul>
+              <div class="ph-cost">£0</div>
+            </div>
+            <div class="ph-arrow" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="phase later reveal">
+              <span class="ph-tag">Approve later</span>
+              <h4>Stage 2 — make it permanent</h4>
+              <ul>
+                <li>Dedicated renewed laptop</li>
+                <li>Lockable storage / AV cabinet</li>
+                <li>Wall / ceiling mount</li>
+              </ul>
+              <div class="ph-cost">~£550</div>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Timing</th><th>Items</th><th>Estimate</th><th>Decision required</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="pill now">Approve now</span></td>
+                  <td>PTZOptics Move SE 20X camera and initial audio-feed allowance</td>
+                  <td class="num-cell">≈ £1,010 upfront</td>
+                  <td>Approve Stage 1 equipment, subject to final seller, warranty, return terms and audio-connector check before purchase.</td>
+                </tr>
+                <tr>
+                  <td><span class="pill now">Approve now</span></td>
+                  <td>BT wired broadband via Switch Aid</td>
+                  <td class="num-cell">≈ £32/mo × 24</td>
+                  <td>Approve the recurring broadband commitment so the stream no longer depends on mobile 5G signal quality.</td>
+                </tr>
+                <tr>
+                  <td><span class="pill later">Approve later</span></td>
+                  <td>Dedicated laptop, lockable cabinet/storage and wall/ceiling mount</td>
+                  <td class="num-cell">≈ £550</td>
+                  <td>Defer until the Stage 1 live-stream trial has been reviewed and accepted by the committee.</td>
+                </tr>
+                <tr class="row-total">
+                  <td>Total if all stages proceed</td>
+                  <td>All Stage 1 equipment, 24 months of broadband, and Stage 2 permanent setup</td>
+                  <td class="num-cell">≈ £2,328</td>
+                  <td>Full transparency view — not the immediate upfront equipment request.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="note">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <div><strong>Recommendation:</strong> approve broadband and Stage 1 equipment now, run the Dars-e-Quran trial, then approve the permanent laptop, cabinet and mount only once the trial proves the system is reliable and easy to operate.</div>
+          </div>
+        </section>
+
+        <!-- ============ APPENDIX B ============ -->
+        <section id="appendix-items">
+          <span class="appendix-tag">Appendix B</span>
+          <div class="sec-head"><span class="sec-num">05</span><h2>Item selection rationale</h2></div>
+          <p class="lead">Each item linked to the operational problem it solves, why this option was chosen, and when the purchase should happen.</p>
+
+          <div class="filter-bar">
+            <span class="f-label">Filter</span>
+            <button class="fbtn on" data-filter="all">All items</button>
+            <button class="fbtn" data-filter="now">Approve now</button>
+            <button class="fbtn" data-filter="later">Approve later</button>
+          </div>
+
+          <div class="gallery" id="gallery">
+            <!-- BT broadband -->
+            <article class="eq-card reveal" data-timing="now">
+              <div class="eq-figure">
+                <span class="eq-pill pill now">Approve now</span>
+                <img src="html_assets/equipment-2.png" alt="BT Internet broadband router illustration">
+              </div>
+              <div class="eq-body">
+                <h4>BT wired broadband</h4>
+                <div class="eq-price">£32 / month · via Switch Aid</div>
+                <div class="eq-meta">
+                  <span class="label">Why it's needed</span>
+                  <p>Provides a stable wired route for streaming and removes dependence on 5G signal quality during busy events.</p>
+                  <span class="label">Why this option</span>
+                  <p>Existing BT wiring may avoid installation cost; Switch Aid arranges charity-focused supply, and the 24-month term limits long-term exposure.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Camera -->
+            <article class="eq-card reveal" data-timing="now">
+              <div class="eq-figure">
+                <span class="eq-pill pill now">Approve now</span>
+                <img src="html_assets/equipment-1.png" alt="PTZOptics Move SE 20X camera with 5-year warranty badge">
+              </div>
+              <div class="eq-body">
+                <h4>PTZOptics Move SE 20X camera</h4>
+                <div class="eq-price">£995 · 5-year warranty</div>
+                <div class="eq-meta">
+                  <span class="label">Why it's needed</span>
+                  <p>Captures the imam or speaker clearly from a fixed position for Jumu'ah, talks, classes and community events.</p>
+                  <span class="label">Why this option</span>
+                  <p>1080p, 20× optical zoom, remote pan/tilt/zoom, presets and mounting options — without paying for unnecessary broadcast-level features.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Audio -->
+            <article class="eq-card reveal" data-timing="now">
+              <div class="eq-figure">
+                <span class="eq-pill pill now">Approve now</span>
+                <img src="html_assets/equipment-3.png" alt="Audio-feed interface and cable">
+              </div>
+              <div class="eq-body">
+                <h4>Audio-feed interface &amp; cables</h4>
+                <div class="eq-price">Small Stage 1 allowance</div>
+                <div class="eq-meta">
+                  <span class="label">Why it's needed</span>
+                  <p>Allows the livestream to receive a clean audio signal rather than relying on a phone microphone or room sound.</p>
+                  <span class="label">Why this option</span>
+                  <p>Held as a small allowance because the exact connector requirement is best confirmed during the live trial.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Laptop -->
+            <article class="eq-card reveal" data-timing="later">
+              <div class="eq-figure">
+                <span class="eq-pill pill later">Approve later</span>
+                <img src="html_assets/equipment-4.png" alt="Dedicated renewed laptop">
+              </div>
+              <div class="eq-body">
+                <h4>Dedicated renewed laptop</h4>
+                <div class="eq-price">≈ £300</div>
+                <div class="eq-meta">
+                  <span class="label">Why it's needed</span>
+                  <p>Runs the streaming software and removes reliance on Qasim's personal laptop after the trial.</p>
+                  <span class="label">Why this option</span>
+                  <p>A renewed i5 laptop with 16&nbsp;GB RAM is sufficient for this use case and avoids the cost of a new high-spec machine.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Cabinet -->
+            <article class="eq-card reveal" data-timing="later">
+              <div class="eq-figure">
+                <span class="eq-pill pill later">Approve later</span>
+                <img src="html_assets/equipment-5.png" alt="Lockable AV cabinet">
+              </div>
+              <div class="eq-body">
+                <h4>Lockable storage / AV cabinet</h4>
+                <div class="eq-price">≈ £150</div>
+                <div class="eq-meta">
+                  <span class="label">Why it's needed</span>
+                  <p>Keeps the laptop, camera accessories and cables secure and available at the masjid.</p>
+                  <span class="label">Why this option</span>
+                  <p>A lockable cabinet reduces loss, clutter and setup time, giving volunteers a consistent storage location.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Mount -->
+            <article class="eq-card reveal" data-timing="later">
+              <div class="eq-figure">
+                <span class="eq-pill pill later">Approve later</span>
+                <img src="html_assets/equipment-6.png" alt="Wall or ceiling mounting bracket">
+              </div>
+              <div class="eq-body">
+                <h4>Wall / ceiling bracket</h4>
+                <div class="eq-price">≈ £100</div>
+                <div class="eq-meta">
+                  <span class="label">Why it's needed</span>
+                  <p>Fixes the camera discreetly in the correct position and reduces manual setup before events.</p>
+                  <span class="label">Why this option</span>
+                  <p>Deferred until the best camera position is confirmed through the Stage 1 trial and committee review.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p class="source-note">BT router visual is indicative; the exact hub/router supplied should be confirmed with Switch Aid or BT before final purchase.</p>
+        </section>
+
+        <!-- ============ CLOSING ============ -->
+        <div class="closing reveal">
+          <h3>In one line</h3>
+          <p>Approve broadband and the Stage 1 equipment now — an upfront ask of around <strong style="color:#ecc987">£1,010</strong> — run the live trial, and decide on the permanent setup only once you've seen it work.</p>
+          <a class="cta" href="#appendix-cost">Review the Stage 1 approval request
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </main>
+
+      <footer>
+        <div class="brandmark">
+          <svg class="seal" viewBox="0 0 40 40" fill="none" aria-hidden="true" style="width:24px;height:24px;">
+            <circle cx="20" cy="20" r="19" stroke="#b8893a" stroke-width="1.5"/>
+            <path d="M25 20a7 7 0 1 1-5.2-6.77 5.6 5.6 0 1 0 0 13.54A7 7 0 0 1 25 20Z" fill="#0f5132"/>
+          </svg>
+          Greenwich Madina Trust
+        </div>
+        <span>Livestream &amp; Digital Access Investment Proposal · June 2026 · v2.0 · Prepared for committee review</span>
+      </footer>
+    </article>
+  </div>
+
+  <script>
+    /* ---------- scroll progress ---------- */
+    const bar = document.getElementById('progressBar');
+    const onScroll = () => {
+      const h = document.documentElement;
+      const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+      bar.style.width = pct + '%';
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---------- reveal on scroll ---------- */
+    const revealIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); revealIO.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
+
+    /* ---------- count-up ---------- */
+    const fmt = (n) => n.toLocaleString('en-GB');
+    function countUp(el) {
+      const target = parseFloat(el.dataset.count);
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const dur = 1100;
+      const start = performance.now();
+      function step(now) {
+        const p = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        const val = Math.round(target * eased);
+        el.textContent = prefix + fmt(val) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = prefix + fmt(target) + suffix;
+      }
+      requestAnimationFrame(step);
+    }
+    const countIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { countUp(e.target); countIO.unobserve(e.target); }
+      });
+    }, { threshold: 0.6 });
+    document.querySelectorAll('[data-count]').forEach(el => countIO.observe(el));
+
+    /* ---------- sticky nav active link ---------- */
+    const links = [...document.querySelectorAll('#navlinks a')];
+    const navIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const id = e.target.id;
+          links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main section').forEach(s => navIO.observe(s));
+
+    /* ---------- cost view toggle ---------- */
+    const toggleBtns = document.querySelectorAll('.toggle button');
+    const segs = document.querySelectorAll('#costBar .seg');
+    const compHeading = document.getElementById('compHeading');
+    const compTotal = document.getElementById('compTotal');
+    toggleBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        toggleBtns.forEach(b => b.classList.remove('on'));
+        btn.classList.add('on');
+        const view = btn.dataset.view;
+        if (view === 'now') {
+          segs.forEach(s => s.classList.toggle('dim', s.dataset.group !== 'now'));
+          compHeading.textContent = 'What the committee approves today';
+          compTotal.textContent = '£1,010 upfront';
+        } else {
+          segs.forEach(s => s.classList.remove('dim'));
+          compHeading.textContent = 'How the maximum £2,328 breaks down';
+          compTotal.textContent = '£2,328';
+        }
+      });
+    });
+    // start in "now" state highlighting
+    segs.forEach(s => s.classList.toggle('dim', s.dataset.group !== 'now'));
+    compHeading.textContent = 'What the committee approves today';
+    compTotal.textContent = '£1,010 upfront';
+
+    /* ---------- equipment filter ---------- */
+    const fbtns = document.querySelectorAll('.fbtn');
+    const cards = document.querySelectorAll('#gallery .eq-card');
+    fbtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        fbtns.forEach(b => b.classList.remove('on'));
+        btn.classList.add('on');
+        const f = btn.dataset.filter;
+        cards.forEach(c => {
+          c.classList.toggle('hide', !(f === 'all' || c.dataset.timing === f));
+        });
+      });
+    });
+
+    /* ---------- print / PDF preparation ----------
+       A static PDF can't toggle, filter or animate, so before printing we
+       freeze everything into its fully-expanded, final state. */
+    function prepareForPrint() {
+      // numbers at their final value (no half-finished count-up)
+      document.querySelectorAll('[data-count]').forEach(el => {
+        const t = parseFloat(el.dataset.count);
+        el.textContent = (el.dataset.prefix || '') + t.toLocaleString('en-GB') + (el.dataset.suffix || '');
+      });
+      // reveal animations off
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+      // full cost view, nothing dimmed
+      segs.forEach(s => s.classList.remove('dim'));
+      compHeading.textContent = 'How the maximum £2,328 breaks down';
+      compTotal.textContent = '£2,328';
+      // every Q&A answer open
+      document.querySelectorAll('.qa details').forEach(d => d.open = true);
+      // show all equipment cards
+      cards.forEach(c => c.classList.remove('hide'));
+    }
+    window.addEventListener('beforeprint', prepareForPrint);
+    // ?print=1 lets a headless browser bake the static state on load
+    if (new URLSearchParams(location.search).has('print')) {
+      window.addEventListener('load', prepareForPrint);
+    }
+  </script>
+</body>
+</html>
